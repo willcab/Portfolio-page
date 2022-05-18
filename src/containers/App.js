@@ -1,16 +1,19 @@
 import React, { Component, Profiler } from "react";
-import logo from "../logo.svg";
-import "../App.css";
 import Header from "../components/Header/Header";
 import Profile from "./Profile"
+import styledComponents from "styled-components";
+
+const AppWrapper= styledComponents.div`
+	text-aling:center;
+`;
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-			 <Header logo={logo}/>
+			<AppWrapper>
+			 <Header/>
 			 <Profile/>
-			</div>
+			</AppWrapper>
 		);
 	}
 }
