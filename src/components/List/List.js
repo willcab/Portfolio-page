@@ -15,7 +15,13 @@ const Label = styledComponents.span`
 	font-weight: bold;
 
 `;
-const List = ({ items }) => (
+const Title = styledComponents.h2`
+padding: 10px 0;
+border-bottom: 1px solid lightGrey;
+`;
+const List = ({ items, title }) => (
+	<>
+	<Title>{title}</Title>
 	<ListWrapper>
 		{items.map((item) => (
 			<LisItem key={item.label}>
@@ -24,5 +30,6 @@ const List = ({ items }) => (
 			</LisItem>
 		))}
 	</ListWrapper>
+	</>
 );
 export default List;
